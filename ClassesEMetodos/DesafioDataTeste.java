@@ -12,7 +12,7 @@ public class DesafioDataTeste {
         chamar.mes = tc.nextInt();
         System.out.println("Informe o ano do seu nascimento: ");
         chamar.ano = tc.nextInt();
-        System.out.println("Vc nasceu nessa data: " + chamar.dia + "/" + chamar.mes + "/" + chamar.ano);
+        System.out.println("Vc nasceu nessa data: " + chamar.obterData());
         tc.close();
     }
 }

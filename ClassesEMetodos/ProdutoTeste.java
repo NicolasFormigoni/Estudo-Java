@@ -12,9 +12,8 @@ public class ProdutoTeste {
         ler.preco = tc.nextDouble();
         System.out.println("Infome o desconto desse produto: ");
         ler.desconto = tc.nextDouble();
-
-        double precoFinal = ler.preco * (1 - ler.desconto);
-        System.out.println("O produto " + ler.nome + " ficou o total igual a: " + precoFinal);
+        ler.precoComDesconto();
+        System.out.println("O produto " + ler.nome + " ficou o total igual a: " + ler.precoComDesconto());
         tc.close();
     }
 }
