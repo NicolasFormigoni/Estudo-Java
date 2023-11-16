@@ -3,9 +3,15 @@ package ClassesEMetodos;
 public class Produto {
     String nome;
     double preco;
-    double desconto;
-
+    static  double desconto = 0.29;
+    Produto(String nomeInicial, double precoInicial){
+        nome = nomeInicial;
+        preco = precoInicial;
+    }
     double precoComDesconto() {
-        return preco * (desconto - 0.01);
+        return preco * (1 - desconto);
+    }
+    double precoComDesconto(double descontoDoGerente){
+    return preco * (1 - desconto + descontoDoGerente);
     }
 }

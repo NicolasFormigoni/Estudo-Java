@@ -1,19 +1,22 @@
 package ClassesEMetodos;
 
 import java.util.Scanner;
+
 // SEGUNDA PARTE DO PROGRAMA
 public class ProdutoTeste {
     public static void main(String[] args) {
-        Produto ler = new Produto();
-        Scanner tc = new Scanner(System.in);
-        System.out.println("Informe o produto: ");
-        ler.nome = tc.nextLine();
-        System.out.println("Informe o preço do produto: ");
-        ler.preco = tc.nextDouble();
-        System.out.println("Infome o desconto desse produto: ");
-        ler.desconto = tc.nextDouble();
-        ler.precoComDesconto();
-        System.out.println("O produto " + ler.nome + " ficou o total igual a: " + ler.precoComDesconto());
-        tc.close();
+        Produto p1 = new Produto("Notebook", 4356.89); // vindo do construtor
+      Produto p2 = new Produto("Caneta Preta",12.56); // vindo do construtor
+
+        Produto.desconto = 0.25;
+
+        System.out.println(p1.nome + " " + p1.precoComDesconto());
+        System.out.println(p2.nome + " " + p2.precoComDesconto());
+
+        double precoFinal1 = p1.precoComDesconto();
+        double precoFinal2 = p2.precoComDesconto(0.1);
+        double mediaCarrinho = (precoFinal1 + precoFinal2) / 2;
+
+        System.out.printf("Media do carrinho = R$%.2f.", mediaCarrinho);
     }
 }
